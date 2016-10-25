@@ -1,2 +1,4 @@
 # plover-handlebars
-[handlebars](http://handlebarsjs.com/) template plugin for plover
+
+
+【Plover插件】用于支持[handlebars](http://handlebarsjs.com/)模板引擎。
