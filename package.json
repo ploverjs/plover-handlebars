@@ -39,5 +39,8 @@
   "bugs": {
     "url": "https://github.com/alibaba/plover/issues"
   },
-  "homepage": "https://github.com/ploverjs/plover-handlebars#readme"
+  "homepage": "https://github.com/ploverjs/plover-handlebars#readme",
+  "dependencies": {
+    "plover-util": "^1.5.1"
+  }
 }

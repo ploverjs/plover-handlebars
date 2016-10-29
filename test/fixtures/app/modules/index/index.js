@@ -21,5 +21,10 @@ exports.books = function() {
     { name: '代码大全', price: 105.8 }
   ];
 
-  this.render({ books });
+  const special = {
+    name: '模式分类',
+    price: 50.2
+  };
+
+  this.render({ books, special });
 };
