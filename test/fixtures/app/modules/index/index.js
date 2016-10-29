@@ -26,5 +26,9 @@ exports.books = function() {
     price: 50.2
   };
 
-  this.render({ books, special });
+  const formatPrice = (v) => {
+    return v + '元'
+  };
+
+  this.render({ books, special, formatPrice });
 };
