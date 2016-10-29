@@ -14,5 +14,6 @@ describe('plover-handlebars/lib/plugin', () => {
 
   app.use(require('../lib/plugin'));
 
+  app.it('/index/books', 'books.html');
   app.it('/', 'index.html');
 });
