@@ -2,8 +2,9 @@
 
 
 const pathUtil = require('path');
+const sinon = require('sinon');
 const mm = require('plover-test-mate');
-
+const Logger = require('plover-logger');
 
 
 describe('plover-handlebars/lib/plugin', () => {
@@ -20,4 +21,29 @@ describe('plover-handlebars/lib/plugin', () => {
 
   app.it('/index/books', 'books.html');
   app.it('/', 'index.html');
+
+
+  describe('helper not found', () => {
+
+    beforeEach(() => {
+      sinon.stub(Logger.prototype, 'error');
+    });
+
+
+    afterEach(() => {
+      Logger.prototype.error.restore();
+    });
+
+
+    [
+      '/index/invalidFormat',
+      '/index/ctxNotFound',
+      '/index/methodNotFound'
+    ].forEach((url) => {
+      it(url, () => {
+        return app.get(url)
+          .expect(/Error: unknow helper:/);
+      });
+    });
+  });
 });

@@ -32,3 +32,15 @@ exports.books = function() {
 
   this.render({ books, special, formatPrice });
 };
+
+
+[
+  'invalidFormat',
+  'ctxNotFound',
+  'methodNotFound'
+].forEach(name => {
+  exports[name] = function() {
+    this.layout = false;
+    this.render();
+  };
+});

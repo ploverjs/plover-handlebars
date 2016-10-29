@@ -25,9 +25,11 @@
     "istanbul": "^0.4.5",
     "mocha": "^3.1.0",
     "plover-assets": "^2.4.0",
+    "plover-logger": "^1.4.1",
     "plover-test-mate": "^1.1.0",
     "plover-xview": "^1.2.0",
-    "should": "^11.1.0"
+    "should": "^11.1.0",
+    "sinon": "^1.17.6"
   },
   "plover": {
     "plugin": "lib/plugin.js"
