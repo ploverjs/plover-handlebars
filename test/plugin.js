@@ -9,7 +9,8 @@ const mm = require('plover-test-mate');
 describe('plover-handlebars/lib/plugin', () => {
   const app = mm({
     applicationRoot: pathUtil.join(__dirname, 'fixtures/app'),
-    expectRoot: pathUtil.join(__dirname, 'fixtures/expect')
+    expectRoot: pathUtil.join(__dirname, 'fixtures/expect'),
+    port: 6100
   });
 
   app.use('plover-assets');

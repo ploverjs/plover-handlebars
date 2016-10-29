@@ -1,23 +1,23 @@
 <h2>Books</h2>
 <ul>
   {{#each books}}
-  <li>{{control 'elements/book-item'}}</li>
+  <li>{{app-control 'elements/book-item'}}</li>
   {{/each}}
 </ul>
 
 
 <div class="single">
-  {{control 'elements/book-item' name='线性代数应该这样学' price=41.8}}
+  {{app-control 'elements/book-item' name='线性代数应该这样学' price=41.8}}
 </div>
 
 
 <div class="special">
-  {{control 'elements/book-item' special}}
+  {{app-control 'elements/book-item' special}}
 </div>
 
 
 <div class="with special">
   {{#with special}}
-    {{control 'elements/book-item' price=100}}
+    {{app-control 'elements/book-item' price=100}}
   {{/with}}
 </div>
