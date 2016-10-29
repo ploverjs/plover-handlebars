@@ -27,7 +27,7 @@ exports.books = function() {
   };
 
   const formatPrice = (v) => {
-    return v + '元'
+    return v + '元';
   };
 
   this.render({ books, special, formatPrice });
@@ -36,8 +36,7 @@ exports.books = function() {
 
 [
   'invalidFormat',
-  'ctxNotFound',
-  'methodNotFound'
+  'ctxNotFound'
 ].forEach(name => {
   exports[name] = function() {
     this.layout = false;

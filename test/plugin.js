@@ -7,6 +7,9 @@ const mm = require('plover-test-mate');
 const Logger = require('plover-logger');
 
 
+/* eslint max-nested-callbacks: [2, 4] */
+
+
 describe('plover-handlebars/lib/plugin', () => {
   const app = mm({
     applicationRoot: pathUtil.join(__dirname, 'fixtures/app'),
@@ -24,7 +27,6 @@ describe('plover-handlebars/lib/plugin', () => {
 
 
   describe('helper not found', () => {
-
     beforeEach(() => {
       sinon.stub(Logger.prototype, 'error');
     });
@@ -37,8 +39,7 @@ describe('plover-handlebars/lib/plugin', () => {
 
     [
       '/index/invalidFormat',
-      '/index/ctxNotFound',
-      '/index/methodNotFound'
+      '/index/ctxNotFound'
     ].forEach((url) => {
       it(url, () => {
         return app.get(url)
